@@ -1,49 +1,44 @@
 doctype html
 html
-  head
-    meta(charset='utf-8')
+        head
+                meta(charset='utf-8')
+                meta(http-equiv='x-ua-compatible', content='ie=edge')
+                title My Movie List
+                meta(name='viewport', content='width=device-width, initial-scale=1')
+                link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css')
+                link(rel='stylesheet', href='css/main.css')
 
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-
-    title My Movie List
-
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css')
-
-    link(rel='stylesheet', href='scss/main.css')
-
-  body
-    .container
-      .upper-row.row
-        .search.five.columns
-          h3 Search for a movie:
-
-          input(type='text', placeholder='title...')
-
-          button.movie-search Search
-
-        .seven.columns
-          .movie-preview
-
-      .movie-list
-        table.u-full-width
-          thead
-            tr
-              th
-
-              th Title
-
-              th Year
-
-              th Rating
-
-              th
-
-          tbody
-
-    script(src='/lib/build.js')
-
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.js')
-
-    script(src='js/main.js')
+        body
+                .overlay
+                        .modal
+                                .video-box
+                                button.button-primary Close
+                .container.u-full-width.head
+                        .row
+                                .page-header.five.columns
+                                        h1 Movie List
+                                .five.columns.logout-div
+                                        h5.greeting
+                                .two.columns.logout-div
+                                        button.log-out Logout
+                .container
+                        .upper-row.row
+                                .search.four.columns
+                                        h4 Search for a movie:
+                                        input(type='text', placeholder='title...')
+                                        button.movie-search Search
+                                .eight.columns
+                                        .movie-preview
+                        .movie-list
+                                table.u-full-width
+                                        thead
+                                                tr
+                                                        th
+                                                        th Title
+                                                        th Year
+                                                        th Rating
+                                                        th
+                                        tbody
+                script(src='/lib/build.js')
+                script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.js')
+                script(src='js/main.js')

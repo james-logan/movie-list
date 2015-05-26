@@ -1,0 +1,19 @@
+extends ../_layout.jade
+
+block content
+     .container.login-container
+          .row
+               .loginbox.twelve.columns
+                    .form-div
+                         form
+                              h2 Login
+                              input(type="email" placeholder="email")
+                              input(type="password" placeholder="password")
+                              input(type="submit" value="Login")
+                              button.register(value="...or register an account") ...or register an account
+          .row
+               .eight.columns.offset-by-two
+                    button.reset(value="Forgot your password? Let's reset it.") Forgot your password? Let's reset it.
+     script(src="../lib/build.js")
+     script(src="../js/login.js")
+

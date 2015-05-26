@@ -13,11 +13,13 @@ cp -r src public
   rm -rf src/*.html public/_partials" &
 
 # compile sass to css
+./node_modules/.bin/node-sass src/scss/main.scss public/css/main.css
 ./node_modules/.bin/node-sass \
   --output-style compressed \
   --source-map-embed \
   --recursive \
-  src/_styles/main.scss public/css/main.css &
+  -w \
+  src/scss/main.scss public/css/main.css &
 
 # convert ES6 JS to ES5
 ./node_modules/.bin/babel \
